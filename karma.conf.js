@@ -113,11 +113,11 @@ const baseKarmaConf = (overrides) => {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['ChromeHeadless'],
+    browsers: ['HeadlessChrome'],
     
     // add --no-sandbox because gitlab ci could no start chromeheadless without it
     customLaunchers:{
-      ChromeHeadless:{
+      HeadlessChrome:{
         base: 'ChromeHeadless',
         flags: ['--no-sandbox']
       }
