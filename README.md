@@ -1,6 +1,6 @@
 # demo-web-client
 
-[![Build Status](https://travis-ci.com/Noro07/demo-web-client.svg?branch=master)](https://travis-ci.com/Noro07/demo-web-client)
+[![Build Status](https://gitlab.com/NoroLinxy/demo-web-client/badges/master/pipeline.svg)](https://gitlab.com/NoroLinxy/demo-web-client/commits/master)
 
 This is a demo for developing an web client for all skills
 Monorepo that contains React and Redux. Built with Webpack. The project is served on Node JS Express server. Managed by Lerna.
