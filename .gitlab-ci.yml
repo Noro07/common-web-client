@@ -24,6 +24,6 @@ stages:
     
 2. unit test:
   stage : unit test
-  scripte:
+  script:
     - npm run test:unit
  
