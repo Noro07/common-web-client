@@ -7,9 +7,6 @@ cache:
 before_script:
   - npm run link-packages
 
-after_script:
-  - rm secrets
-
 stages:
   - lint check
   - unit test
