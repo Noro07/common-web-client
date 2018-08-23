@@ -4,7 +4,17 @@ cache:
   paths:
     - node_modules/
 
-before_script:
+stages:
+  - init
+  - lint check
+  - unit test
+  - e2e test
+  - build
+  - deploy
+  
+init:
+  stage: init
+  script:
     - npm run link-packages
     - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | tee -a /etc/apt/sources.list
     - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
@@ -13,13 +23,6 @@ before_script:
     - Xvfb :0 -ac -screen 0 1024x768x24 &
     - export DISPLAY=:99
     - node ./node_modules/.bin/webdriver-manager update
-
-stages:
-  - lint check
-  - unit test
-  - e2e test
-  - build
-  - deploy
 
 link check:
   stage: lint check
