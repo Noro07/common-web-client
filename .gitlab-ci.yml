@@ -15,24 +15,19 @@ before_script:
   - node ./node_modules/.bin/webdriver-manager update
 
 stages:
-#   - init
-  - lint check
   - unit test
   - e2e test
   - build
   - deploy
-  
-# init:
-#   stage: init
 
-
-link check:
-  stage: lint check
-  script:
-    - npm run check:lint
-    
-unit test:
+ 
+unit test/ lint check:
   stage : unit test
   script:
-    - npm run test:unit
- 
+    - npm run test
+
+e2e test:
+  stage: e2e test
+  script:
+    - npm run start:dev &
+    - npm run test:e2e
