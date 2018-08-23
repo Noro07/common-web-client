@@ -15,15 +15,15 @@ before_script:
   - node ./node_modules/.bin/webdriver-manager update
 
 stages:
-  - init
+#   - init
   - lint check
   - unit test
   - e2e test
   - build
   - deploy
   
-init:
-  stage: init
+# init:
+#   stage: init
 
 
 link check:
