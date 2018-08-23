@@ -117,7 +117,7 @@ const baseKarmaConf = (overrides) => {
     
     // add --no-sandbox because gitlab ci could no start chromeheadless without it
     customLaunchers:{
-      HeadlessChrome:{
+      ChromeHeadless:{
         base: 'ChromeHeadless',
         flags: ['--no-sandbox']
       }
