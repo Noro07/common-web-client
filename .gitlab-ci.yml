@@ -25,8 +25,8 @@ stages:
   - deploy
 
  
-ut / eslint:
-  stage : unit test
+ut:
+  stage: unit test
   script:
     - npm run test
 
@@ -36,6 +36,6 @@ e2e:
     - npm run test:e2e
     
 build:
-  stage : build
+  stage: build
   script:
     - npm run build
