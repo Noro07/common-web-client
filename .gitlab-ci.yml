@@ -5,25 +5,20 @@ cache:
     - node_modules/
 
 before_script:
-#   - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-#   - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list
-#   - apt-get update -yqqq
-#   - apt-get install -y google-chrome-stable > /dev/null 2>&1
-  
-
-  - npm run link-packages
-#   - "apt-get -qq -y install wget"
+# Add Google Chrome to aptitude's (package manager) sources
+  - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | tee -a /etc/apt/sources.list
+  # Fetch Chrome's PGP keys for secure installation
   - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-  - sh -c 'echo \"deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google-chrome.list'
-  - apt-get -y update
-  - apt-get -y install google-chrome-stable
-
-  # - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | tee -a /etc/apt/sources.list
-  # - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-#   - apt-get -qq update -y
-  # - apt-get -qq install -y google-chrome-stable xvfb gtk2-engines-pixbuf xfonts-cyrillic xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable imagemagick x11-apps default-jre
+  # Update aptitude's package sources
+  - apt-get -qq update -y
+  # Install latest Chrome stable, Xvfb packages
+  - apt-get -qq install -y google-chrome-stable xvfb gtk2-engines-pixbuf xfonts-cyrillic xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable imagemagick x11-apps default-jre
+  # Launch Xvfb
   - Xvfb :0 -ac -screen 0 1024x768x24 &
+  # Export display for Chrome
   - export DISPLAY=:99
+  # Download Selenium server JAR, drivers for Chrome
+  - node ./node_modules/.bin/webdriver-manager update
   - npm run start:dev &
 
 stages:
