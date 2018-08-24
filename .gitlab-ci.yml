@@ -10,17 +10,23 @@ before_script:
   # - apt-get update -yqqq
   # - apt-get install -y google-chrome-stable > /dev/null 2>&1
   
-  - wget -q -O — https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - 
-  - echo ‘deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main’ | tee /etc/apt/sources.list.d/google-chrome.list
-  - apt-get update
-  - apt-get install google-chrome-stable -y
+#   - wget -q -O — https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - 
+#   - echo ‘deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main’ | tee /etc/apt/sources.list.d/google-chrome.list
+#   - apt-get update
+#   - apt-get install google-chrome-stable -y
+  
+    - apt-get update -yqqq
+    - apt-get install -y xvfb
+    - apt-get install iceweasel -yqq
+    - Xvfb :99 -ac &
+    - export DISPLAY=:99
   
   - npm run link-packages
-  - "apt-get -qq -y install wget"
-  - "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - "
-  - "sh -c 'echo \"deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google-chrome.list'"
-  - "apt-get -y update"
-  - "apt-get -y install google-chrome-stable"
+#   - "apt-get -qq -y install wget"
+#   - "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - "
+#   - "sh -c 'echo \"deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google-chrome.list'"
+#   - "apt-get -y update"
+#   - "apt-get -y install google-chrome-stable"
 
   # - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | tee -a /etc/apt/sources.list
   # - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
