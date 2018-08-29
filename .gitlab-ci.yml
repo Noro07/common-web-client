@@ -29,6 +29,7 @@ ut:
 e2e:
   stage: e2e test
   script:
+    - sleep 5
     - npm run test:e2e
     
 build:
