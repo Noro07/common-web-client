@@ -13,7 +13,6 @@ before_script:
   - Xvfb :0 -ac -screen 0 1024x768x24 &
   - export DISPLAY=:99
   - node ./node_modules/.bin/webdriver-manager update
-  - npm run start:dev &
 
 stages:
   - unit test
@@ -29,7 +28,7 @@ ut:
 e2e:
   stage: e2e test
   script:
-    - sleep 5
+    - npm run start:dev &
     - npm run test:e2e
     
 build:
