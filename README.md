@@ -7,16 +7,14 @@ Monorepo that contains React and Redux. Built with Webpack. The project is serve
 
 ## Set up
 
-Install all dependencies:
-
-> npm run link-packages
+Install all dependencies `npm run link-packages`
 
 ### Run dev mode
 
 Dev mode enables webpack-dev-middleware, will cause Webpack to compile files in-memory - code changes are saved and updated
 
 1. `npm run start:dev` to start web server.
-2. Go to browser and hit http://localhost:3000/test/#/ to launch.
+2. Go to browser and hit <http://localhost:3000/test/#/> to launch.
 
 ## Unit tests
 
@@ -30,8 +28,8 @@ All cases are written in Jasmine, executing via Karma on Chrome Headless. Code c
 
 Use protractor to set up framework and all cases are written in Jasmine.
 
-1. Ensure the web server is running, run `npm run start:test` to start a web server in background.
-2. Run npm run test:e2e to start the E2E testing.
+1. Ensure the web server is running, run `npm run start:dev` to start a web server in background.
+2. Run `npm run test:e2e` to start the E2E testing.
 3. Review packages/\*/tests/out/e2e for E2E testing reports.
 
 ## Static Analysis (Eslint)
