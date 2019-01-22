@@ -18,6 +18,11 @@
     "pretest:e2e": "webdriver-manager update --ignore_ssl",
     "test:e2e": "protractor protractor.conf.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Noro07/demo-web-client.git"
