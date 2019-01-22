@@ -10,13 +10,8 @@ export const fetchUser = () => (dispatch) => {
   const requestURL = '/api/user';
   fetchUtils.fetchJSON(requestURL).then(
     (json) => {
-      dispatch(
-        loadUser(
-          json.user)
-        );
+      dispatch(loadUser(json.user));
     },
-    () => {
-
-    }
+    () => {}
   );
 };
