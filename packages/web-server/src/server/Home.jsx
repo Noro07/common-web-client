@@ -18,6 +18,7 @@ const Home = language => (
       <div id="content" />
       <script src={`${SERVER_URL_LIB}/main.Bundle.js`} />
     </body>
-  </html>);
+  </html>
+);
 
 export default Home;
