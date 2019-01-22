@@ -7,8 +7,10 @@
     "build": "cross-env NODE_ENV=production npm run build:web && npm run build:server",
     "build:server": "babel ./src --out-dir ./lib --copy-files",
     "build:web": "webpack --config=webpack.config.prod.js",
-    "check:lint": "eslint -f html --ext .js,.jsx src -o tests/out/lint-report.html",
-    "lint:fix": "eslint --fix --ext .js,.jsx src",
+    "check:lint": "eslint -c ../../.eslintrc -f html --ext .js,.jsx src -o tests/out/lint-report.html",
+    "lint:fix": "eslint -c ../../.eslintrc --fix --ext .js,.jsx src",
+    "format:dry": "prettier --config ../../.prettierrc --list-different \"{src,tests/unit}/**/*{.js,.jsx}\"",
+    "format": "prettier --config ../../.prettierrc --write \"{src,tests/unit}/**/*{.js,.jsx}\"",
     "start": "cross-env NODE_ENV=production node ./lib/server/server.js",
     "start:dev": "cross-env NODE_ENV=development ENABLE_MOCK=true babel-node src/server/server.js"
   },
