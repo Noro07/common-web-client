@@ -5,7 +5,7 @@ import { App } from '../../../src/containers/App';
 describe('<App />', () => {
   const initialProps = {
     user: 'mock user',
-    loadUser: () => {},
+    loadUser: () => {}
   };
 
   it('should render the app container', () => {

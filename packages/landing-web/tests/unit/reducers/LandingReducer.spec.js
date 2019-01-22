@@ -1,4 +1,6 @@
-import LandingReducer, { LANDING_INITSTATE } from '../../../src/reducers/LandingReducer';
+import LandingReducer, {
+  LANDING_INITSTATE
+} from '../../../src/reducers/LandingReducer';
 
 describe('view reducers', () => {
   let initialState;
@@ -7,7 +9,7 @@ describe('view reducers', () => {
     initialState = LANDING_INITSTATE;
   });
 
-  it('should do nothing if action name is not matched', ()=> {
+  it('should do nothing if action name is not matched', () => {
     const action = { type: null };
     const state = LandingReducer(undefined, action);
 
