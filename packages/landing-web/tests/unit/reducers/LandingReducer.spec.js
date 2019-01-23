@@ -14,6 +14,5 @@ describe('view reducers', () => {
     const state = LandingReducer(undefined, action);
 
     expect(state).toEqual(initialState);
-    expect(true).toEqual(true);
   });
 });
