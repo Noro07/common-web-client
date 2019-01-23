@@ -18,7 +18,7 @@
     "test:unit": "lerna exec npm run test:unit --scope \"@(landing-web)\" --stream --concurrency 1",
     "pretest:e2e": "webdriver-manager update --ignore_ssl",
     "test:e2e": "protractor protractor.conf.js",
-    "update:routes": "gulp copy-routes"
+    "update:routes": "gulp update"
   },
   "husky": {
     "hooks": {
