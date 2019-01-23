@@ -20,12 +20,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick --staged",
+      "pre-push": "npm run test"
     }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Noro07/demo-web-client.git"
+    "url": "git+https://gitlab.com/NoroLinxy/demo-web-client.git"
   },
   "keywords": [
     "web",
@@ -34,9 +35,9 @@
   "author": "noro",
   "license": "SEE LICENSE IN license",
   "bugs": {
-    "url": "https://github.com/Noro07/demo-web-client/issues"
+    "url": "https://gitlab.com/NoroLinxy/demo-web-client/issues"
   },
-  "homepage": "https://github.com/Noro07/demo-web-client#readme",
+  "homepage": "https://gitlab.com/NoroLinxy/demo-web-client/blob/master/README.md",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cross-env": "^5.2.0",
