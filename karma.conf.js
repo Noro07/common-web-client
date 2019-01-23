@@ -28,8 +28,7 @@ const baseKarmaConf = (overrides) => {
     ],
 
     // list of files / patterns to exclude
-    exclude: [
-    ],
+    exclude: [],
 
     plugins: [
       'karma-chrome-launcher',
@@ -105,8 +104,7 @@ const baseKarmaConf = (overrides) => {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    // eslint-disable-next-line
-    // logLevel: LOG_INFO,
+    logLevel: LOG_INFO,
 
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
@@ -135,28 +133,35 @@ const baseKarmaConf = (overrides) => {
       mode: 'development',
       devtool: 'inline-source-map',
       module: {
-        rules: [{
-          test: /\.jsx?$/,
-          use: [{
-            loader: 'babel-loader',
-            options: {
-              'plugins': [
-                ['istanbul', {
-                  'include': [
-                    '**/src/**'
+        rules: [
+          {
+            test: /\.jsx?$/,
+            use: [
+              {
+                loader: 'babel-loader',
+                options: {
+                  plugins: [
+                    [
+                      'istanbul',
+                      {
+                        include: ['**/src/**']
+                      }
+                    ]
                   ]
-                }]
-              ]
-            }
-          }],
-          exclude: /node_modules/
-        }, {
-          test: /\.scss$/,
-          use: ['style-loader', 'css-loader', 'sass-loader']
-        }, {
-          test: /\.css$/,
-          use: ['style-loader', 'css-loader']
-        }].concat(rules)
+                }
+              }
+            ],
+            exclude: /node_modules/
+          },
+          {
+            test: /\.scss$/,
+            use: ['style-loader', 'css-loader', 'sass-loader']
+          },
+          {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+          }
+        ].concat(rules)
       },
       resolve: {
         extensions: ['.js', '.jsx', '.scss']

@@ -13,6 +13,7 @@
     "format": "lerna run format",
     "start": "lerna run start --scope web-server --stream",
     "start:dev": "lerna run start:dev --scope web-server --stream",
+    "pretest": "rimraf ./packages/*/tests/out",
     "test": "npm run check:lint && npm run test:unit",
     "test:unit": "lerna exec npm run test:unit --scope \"@(landing-web)\" --stream --concurrency 1",
     "pretest:e2e": "webdriver-manager update --ignore_ssl",
