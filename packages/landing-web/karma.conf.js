@@ -1,5 +1,12 @@
 const baseKarmaConf = require('../../karma.conf');
 
 module.exports = (config) => {
-  config.set(baseKarmaConf());
+  const overrides = {};
+
+  const updateConf = baseKarmaConf(overrides);
+  updateConf.logLevel = config.LOG_INFO;
+  // level of logging
+  // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+
+  config.set(updateConf);
 };
