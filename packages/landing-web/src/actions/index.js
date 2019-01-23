@@ -1,4 +1,4 @@
-import { fetchUtils } from 'utils-web';
+import { fetchUtils, routesUtils } from 'utils-web';
 import * as ACTION_TYPE from '../constants/ActionType';
 
 export const loadUser = (user) => ({
@@ -7,7 +7,7 @@ export const loadUser = (user) => ({
 });
 
 export const fetchUser = () => (dispatch) => {
-  const requestURL = '/api/user';
+  const requestURL = routesUtils.API_URL_USER;
   fetchUtils.fetchJSON(requestURL).then(
     (json) => {
       dispatch(loadUser(json.user));

@@ -55,5 +55,16 @@ app.use(
 );
 
 app.listen(app.get('port'), () => {
-  console.log(`Server started: http://localhost:${app.get('port')}/`); // eslint-disable-line no-console
+  console.log(
+    '========================================================================'
+  ); // eslint-disable-line no-console
+  console.log('=='); // eslint-disable-line no-console
+  console.log(`==    Server started: http://localhost:${app.get('port')}/`); // eslint-disable-line no-console
+  console.log(
+    `==    Demo-web-client page: http://localhost:${app.get('port')}/test/#/`
+  ); // eslint-disable-line no-console
+  console.log('=='); // eslint-disable-line no-console
+  console.log(
+    '========================================================================'
+  ); // eslint-disable-line no-console
 });
