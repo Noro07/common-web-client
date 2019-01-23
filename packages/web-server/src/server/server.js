@@ -55,16 +55,11 @@ app.use(
 );
 
 app.listen(app.get('port'), () => {
-  console.log(
-    '========================================================================'
-  ); // eslint-disable-line no-console
-  console.log('=='); // eslint-disable-line no-console
-  console.log(`==    Server started: http://localhost:${app.get('port')}/`); // eslint-disable-line no-console
-  console.log(
-    `==    Demo-web-client page: http://localhost:${app.get('port')}/test/#/`
-  ); // eslint-disable-line no-console
-  console.log('=='); // eslint-disable-line no-console
-  console.log(
-    '========================================================================'
-  ); // eslint-disable-line no-console
+  console.info(`Server started: http://localhost:${app.get('port')}/`); // eslint-disable-line no-console
+  console.info('============================================'); // eslint-disable-line no-console
+  console.info('=='); // eslint-disable-line no-console
+  console.info('==    Demo-web-client URL: '); // eslint-disable-line no-console
+  console.info(`==    http://localhost:${app.get('port')}/test/#/`); // eslint-disable-line no-console
+  console.info('=='); // eslint-disable-line no-console
+  console.info('============================================'); // eslint-disable-line no-console
 });
