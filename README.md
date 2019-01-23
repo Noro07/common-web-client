@@ -42,6 +42,6 @@ Run `npm run check:lint` to do the lint check.
 
 Use Prettier to limit the coding style.
 
-Run `npm run format` would auto write coding style, if you want to check which files should be rewrite instead of changing them automaticly, Run `npm run format:dry`, it would only list files.
+Run `npm run format` would automaticly rewrite coding style, if you want to check which files should be rewrite instead of changing them automaticly, Run `npm run format:dry`, it would only list files.
 
 Changes files in commit would be auto-fixed in pre-commit, no action required
