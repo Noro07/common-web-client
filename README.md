@@ -5,13 +5,14 @@
 This is a demo for developing an web client for all skills
 Monorepo that contains React and Redux. Built with Webpack. The project is served on Node JS Express server. Managed by Lerna.
 
-The IoT dashboard is based on this demo:
-<https://gitlab.com/NoroLinxy/iot-web-client>
-
+![image](documents/image/iot-web-client-screenshot.jpg)
+[The IoT dashboard is based on this demo](https://gitlab.com/NoroLinxy/iot-web-client)
 
 ## Set up
 
-Install all dependencies `npm run link-packages`
+- Install all dependencies `npm run link-packages`
+- Copy routes to mock server `npm run update:routes`
+- If you meet any problems during installation, run `npm run clean` to clean the environment and reinstall again.
 
 ### Run dev mode
 
@@ -23,6 +24,8 @@ Dev mode enables webpack-dev-middleware, will cause Webpack to compile files in-
 ## Unit tests
 
 All cases are written in Jasmine, executing via Karma on Chrome Headless. Code coverage is run by istanbul.
+
+_Lint fix is included in this stage._
 
 1. Run `npm run test:unit` to start the Unit Test.
 2. Review packages/\*/tests/out/unit for UT reports.
