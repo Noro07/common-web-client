@@ -5,6 +5,10 @@
 This is a demo for developing an web client for all skills
 Monorepo that contains React and Redux. Built with Webpack. The project is served on Node JS Express server. Managed by Lerna.
 
+The IoT dashboard is based on this demo:
+<https://gitlab.com/NoroLinxy/iot-web-client>
+
+
 ## Set up
 
 Install all dependencies `npm run link-packages`
