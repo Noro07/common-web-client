@@ -28,8 +28,8 @@ All cases are written in Jasmine, executing via Karma on Chrome Headless. Code c
 _Lint fix is included in this stage._
 
 1. Run `npm run test:unit` to start the Unit Test.
-2. Review packages/\*/tests/out/unit for UT reports.
-3. Review packages/\*/tests/out/coverage for UT coverage reports.
+2. Review **packages/\*/tests/out/unit** for UT reports.
+3. Review **packages/\*/tests/out/coverage** for UT coverage reports.
 
 ## E2e tests
 
@@ -37,7 +37,7 @@ Use protractor to set up framework and all cases are written in Jasmine.
 
 1. Ensure the web server is running, run `npm run start:dev` to start a web server in background.
 2. Run `npm run test:e2e` to start the E2E testing.
-3. Review packages/\*/tests/out/e2e for E2E testing reports.
+3. Review **packages/\*/tests/out/e2e** for E2E testing reports.
 
 ## Static Analysis (Eslint)
 
