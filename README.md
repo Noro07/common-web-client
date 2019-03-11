@@ -10,13 +10,13 @@ Monorepo that contains React and Redux. Built with Webpack. The project is serve
 
 ## Set up
 
-- Install all dependencies `npm run link-packages`
-- Copy routes to mock server `npm run update:routes`
-- If you meet any problems during installation, run `npm run clean` to clean the environment and reinstall again.
+- Install all dependencies `npm run link-packages`.
+- Copy routes to mock server `npm run update:routes`.
+- If you meet any problems during installation, run `npm run clean` to clean the environment and run `npm run ready`, it would prepare all references and routes.
 
 ### Run dev mode
 
-Dev mode enables webpack-dev-middleware, will cause Webpack to compile files in-memory - code changes are saved and updated
+Dev mode enables webpack-dev-middleware, will cause Webpack to compile files in-memory - code changes are saved and updated.
 
 1. `npm run start:dev` to start web server.
 2. Go to browser and hit <http://localhost:3000/test/#/> to launch.
@@ -41,7 +41,7 @@ Use protractor to set up framework and all cases are written in Jasmine.
 
 ## Static Analysis (Eslint)
 
-All projects are covered with eslint rules standard eslint-config-airbnb
+All projects are covered with eslint rules standard eslint-config-airbnb.
 
 Run `npm run check:lint` to do the lint check.
 
@@ -51,4 +51,4 @@ Use Prettier to limit the coding style.
 
 Run `npm run format` would automaticly rewrite coding style, if you want to check which files should be rewrite instead of changing them automaticly, Run `npm run format:dry`, it would only list files.
 
-Changes files in commit would be auto-fixed in pre-commit, no action required
+Changes files in commit would be auto-fixed in pre-commit, no action is required.
