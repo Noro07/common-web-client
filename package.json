@@ -7,7 +7,7 @@
     "check:lint": "lerna run check:lint",
     "lint:fix": "lerna run lint:fix",
     "clean": "lerna clean --yes && rimraf ./node_modules",
-    "prelink-packages": "npm install",
+    "prelink-packages": "npm install && update:routes",
     "link-packages": "lerna bootstrap",
     "format:dry": "lerna run format:dry",
     "format": "lerna run format",
