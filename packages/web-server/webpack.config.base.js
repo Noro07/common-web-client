@@ -63,7 +63,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './lib'),
     filename: '[name].Bundle.js',
-    publicPath: '/lib/',
+    publicPath: './',
     sourceMapFilename: '[name].Bundle.map'
   },
   module: {

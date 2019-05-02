@@ -1,3 +1,4 @@
 node_modules
 packages/*/tests/out
 packages/*/lib
+packages/.DS_Store
