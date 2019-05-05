@@ -1,3 +1,7 @@
 node_modules
 packages/*/tests/out
 packages/*/lib
+packages/.DS_Store
+packages/web-server/.DS_Store
+packages/web-server/src/config/routes.js
+packages/utils-web/tests/.DS_Store

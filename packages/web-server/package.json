@@ -15,5 +15,10 @@
     "start:dev": "cross-env NODE_ENV=development ENABLE_MOCK=true babel-node src/server/server.js"
   },
   "author": "noro",
-  "license": "SEE LICENSE IN license"
+  "license": "SEE LICENSE IN license",
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
 }
