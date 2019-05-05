@@ -1,6 +1,6 @@
 // const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseConfig = require('./webpack.config.base');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const webpackProdConfig = baseConfig;
 
