@@ -16,7 +16,7 @@
     "pretest": "rimraf ./packages/*/tests/out",
     "test": "npm run check:lint && npm run test:unit",
     "test:unit": "lerna exec npm run test:unit --scope \"@(landing-web)\" --stream --concurrency 1",
-    "pretest:e2e": "webdriver-manager update --ignore_ssl",
+    "pretest:e2e": "webdriver-manager update --versions.chrome=76.0.3809.68",
     "test:e2e": "protractor protractor.conf.js",
     "update:routes": "gulp update",
     "ready": "npm run link-packages && npm run update:routes"
