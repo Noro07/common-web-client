@@ -3,6 +3,9 @@ dist: trusty
 language: node_js
 node_js:
   - "10"
+notifications:
+  email:
+    - ibmziyi0220@gmail.com
 addons:
   apt:
     sources:
