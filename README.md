@@ -1,6 +1,6 @@
 # Common-web-client
 
-[![Build Status](https://travis-ci.com/Noro07/common-web-client.svg?branch=master)](https://travis-ci.com/Noro07/common-web-client)
+[![Build Status](https://travis-ci.com/Noro07/common-web-client.svg?branch=master)](https://travis-ci.com/Noro07/common-web-client) [![GitHub last commit](https://img.shields.io/github/last-commit/Noro07/common-web-client)](https://github.com/Noro07/common-web-client/pulls)
 
 This is a demo for developing an web client for all skills
 Monorepo that contains React and Redux. Built with Webpack. The project is served on Node JS Express server. Managed by Lerna.
