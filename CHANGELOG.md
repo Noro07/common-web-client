@@ -1,8 +1,10 @@
-# update
+# Changelog
 
 ## 2019-08-05
 
 > migrate to github
+
+Use travis instead of using gitlab ci
 
 ## 2019-01-23
 

@@ -39,6 +39,10 @@
   "bugs": {
     "url": "https://github.com/Noro07/common-web-client/issues"
   },
+  "engines" : { 
+    "node": ">=8.0.0 <10.15.3",
+    "npm": "6.4.1"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "cross-env": "^5.2.0",
