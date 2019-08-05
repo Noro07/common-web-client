@@ -29,18 +29,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/NoroLinxy/demo-web-client.git"
+    "url": "https://github.com/Noro07/common-web-client"
   },
   "keywords": [
-    "web",
-    "client"
+    "react"
   ],
   "author": "noro",
   "license": "SEE LICENSE IN license",
   "bugs": {
-    "url": "https://gitlab.com/NoroLinxy/demo-web-client/issues"
+    "url": "https://github.com/Noro07/common-web-client/issues"
   },
-  "homepage": "https://gitlab.com/NoroLinxy/demo-web-client/blob/master/README.md",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cross-env": "^5.2.0",
