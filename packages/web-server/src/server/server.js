@@ -59,7 +59,7 @@ app.listen(app.get('port'), () => {
   console.info('============================================'); // eslint-disable-line no-console
   console.info('=='); // eslint-disable-line no-console
   console.info('==    Demo-web-client URL: '); // eslint-disable-line no-console
-  console.info(`==    http://localhost:${app.get('port')}/test/#/`); // eslint-disable-line no-console
+  console.info(`==    http://localhost:${app.get('port')}${Routes.SERVER_URL_BASE}/#/`); // eslint-disable-line no-console
   console.info('=='); // eslint-disable-line no-console
   console.info('============================================'); // eslint-disable-line no-console
 });
