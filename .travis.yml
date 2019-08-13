@@ -20,7 +20,7 @@ before_script:
   - chromedriver-update 73.0.3683.68
   - npm run start:dev &
 install:
-  - npm run link-packages
+  - npm run ready
 script:
   - npm run test
   - npm run test:e2e
