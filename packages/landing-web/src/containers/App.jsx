@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Line } from 'react-chartjs-2';
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
 import { fetchUser } from '../actions/index';
 
 export class App extends PureComponent {
@@ -49,6 +51,12 @@ export class App extends PureComponent {
         {`Hello, ${user}!`}
         <div className="chart-container">
           <Line data={data} />
+        </div>
+        <div className="calendar">
+          <FullCalendar
+            defaultView="dayGridMonth"
+            plugins={[dayGridPlugin]}
+          />
         </div>
       </div>
     );
