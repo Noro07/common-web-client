@@ -94,6 +94,38 @@ module.exports = {
       use: {
         loader: 'html-loader'
       }
+    }, {
+      test: /\.(jpg|jpeg|png|gif|svg)$/,
+      use: {
+        loader: 'url-loader'
+      }
+    }, {
+      test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+      use: [
+        {
+          loader: 'url-loader',
+          options: { limit: '10000', mimetype: 'application/font-woff' }
+        }
+      ]
+    }, {
+      test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+      use: [
+        {
+          loader: 'url-loader',
+          options: { limit: '10000', mimetype: 'application/octet-stream' }
+        }
+      ]
+    }, { 
+      test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, use: ['file-loader']
+    }, {
+      test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+      include: /bootstrap/,
+      use: [
+        {
+          loader: 'url-loader',
+          options: { limit: '10000', mimetype: 'image/svg+xml' }
+        }
+      ]
     }]
   },
   resolve: {
