@@ -4,6 +4,7 @@
 
 This is a demo for developing an web client for all skills
 Monorepo that contains React and Redux. Built with Webpack. The project is served on Node JS Express server. Managed by Lerna.
+
 [简体中文版点击这里](./README_CN.md)
 
 ![image](documents/image/iot-web-client-screenshot.jpg)
