@@ -56,6 +56,30 @@ export class App extends PureComponent {
           <FullCalendar
             defaultView="dayGridMonth"
             plugins={[dayGridPlugin]}
+            eventClick={(info) => {
+              var eventObj = info.event;
+              if (eventObj.url) {
+                alert(
+                  'Clicked ' + eventObj.title + '.\n' +
+                  'Will open ' + eventObj.url + ' in a new tab'
+                );
+                window.open(eventObj.url);
+                info.jsEvent.preventDefault(); // prevents browser from following link in current tab.
+              } else {
+                alert('Clicked ' + eventObj.title);
+              }
+            }}
+            events={[
+              {
+                title: 'simple event',
+                start: '2019-08-02'
+              },
+              {
+                title: 'event with URL',
+                url: 'https://www.google.com/',
+                start: '2019-08-03'
+              }
+            ]}
           />
         </div>
       </div>
