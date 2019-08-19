@@ -1,8 +1,10 @@
+/* eslint-disable no-console */
 import express from 'express';
 import { renderToString } from 'react-dom/server';
 import bodyParser from 'body-parser';
 import path from 'path';
 import React from 'react';
+import openBrowser from 'react-dev-utils/openBrowser';
 import Home from './Home';
 import * as Routes from '../config/routes';
 import enableMockServer from '../mock-server';
@@ -55,11 +57,12 @@ app.use(
 );
 
 app.listen(app.get('port'), () => {
-  console.info(`Server started: http://localhost:${app.get('port')}/`); // eslint-disable-line no-console
-  console.info('============================================'); // eslint-disable-line no-console
-  console.info('=='); // eslint-disable-line no-console
-  console.info('==    Demo-web-client URL: '); // eslint-disable-line no-console
-  console.info(`==    http://localhost:${app.get('port')}${Routes.SERVER_URL_BASE}/#/`); // eslint-disable-line no-console
-  console.info('=='); // eslint-disable-line no-console
-  console.info('============================================'); // eslint-disable-line no-console
+  console.info(`Server started: http://localhost:${app.get('port')}/`);
+  console.info('============================================'); 
+  console.info('==');
+  console.info('==    Demo-web-client URL: ');
+  console.info(`==    http://localhost:${app.get('port')}${Routes.SERVER_URL_BASE}/#/`);
+  console.info('==');
+  console.info('============================================');
+  openBrowser(`http://localhost:${app.get('port')}${Routes.SERVER_URL_BASE}`);
 });

@@ -53,6 +53,7 @@
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
+    "react-dev-utils": "^9.0.3",
     "react-dom": "^16.7.0",
     "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.1",
