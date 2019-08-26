@@ -4,7 +4,8 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Line } from 'react-chartjs-2';
 import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
+// import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
 import { fetchUser } from '../actions/index';
 
 export class App extends PureComponent {
@@ -54,8 +55,10 @@ export class App extends PureComponent {
         </div>
         <div className="calendar">
           <FullCalendar
-            defaultView="dayGridMonth"
-            plugins={[dayGridPlugin]}
+            // defaultView="dayGridMonth"
+            // plugins={[dayGridPlugin]}
+            defaultView='timeGridWeek'
+            plugins={[timeGridPlugin]}
             eventClick={(info) => {
               var eventObj = info.event;
               if (eventObj.url) {
