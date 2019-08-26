@@ -5,6 +5,8 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import React from 'react';
 import openBrowser from 'react-dev-utils/openBrowser';
+import proxy from 'http-proxy-middleware';
+import cors from 'cors';
 import Home from './Home';
 import * as Routes from '../config/routes';
 import enableMockServer from '../mock-server';
@@ -12,7 +14,7 @@ import enableMockServer from '../mock-server';
 const app = express();
 
 app.set('port', process.env.PORT_WEBSERVER || 3000);
-
+app.use(cors());
 if (process.env.NODE_ENV === 'development') {
   const webpack = require('webpack'); // eslint-disable-line global-require
   const webpackDevMiddleware = require('webpack-dev-middleware'); // eslint-disable-line global-require
@@ -54,6 +56,11 @@ app.get(Routes.SERVER_URL_BASE, (req, res) => {
 app.use(
   Routes.SERVER_URL_LIB,
   express.static(path.join(__dirname, '../../lib'))
+);
+
+app.use(
+  '/user',
+  proxy({ target: 'http://localhost:5000/api/', changeOrigin: true }) // localhost:3000/user => localhost:5000/api/user
 );
 
 app.listen(app.get('port'), () => {
