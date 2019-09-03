@@ -15,7 +15,8 @@
     "import/no-extraneous-dependencies": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"]}],
     "space-before-function-paren": ["error", "never"],
-    "semi": [2, "always"]
+    "semi": [2, "always"],
+    "import/no-named-as-default": 0
   },
   "parser": "babel-eslint"
 }
