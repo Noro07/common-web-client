@@ -84,11 +84,11 @@ module.exports = {
       test: /\.scss$/,
       exclude: /node_module/,
       use: sassLoader
-    }, {
-      test: /\.json$/,
-      use: {
-        loader: 'json-loader'
-      }
+    // }, {
+    //   test: /\.json$/,
+    //   use: {
+    //     loader: 'json-loader'
+    //   }
     }, {
       test: /\.html$/,
       use: {
