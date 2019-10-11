@@ -9,16 +9,32 @@ const Home = (language) => (
       <link
         rel="stylesheet"
         type="text/css"
-        href={devModal ? `${SERVER_URL_LIB}/main.css` :`${SERVER_URL_LIB}/main.[hash].css`}
+        href={
+          devModal
+            ? `${SERVER_URL_LIB}/main.css`
+            : `${SERVER_URL_LIB}/main.[hash].css`
+        }
       />
       <meta charSet="utf-8" />
       <title>Demo web</title>
-      <script src={devModal ? `${SERVER_URL_LIB}/vendor.Bundle.js` : `${SERVER_URL_LIB}/vendor.[hash].Bundle.js`} />
+      <script
+        src={
+          devModal
+            ? `${SERVER_URL_LIB}/vendor.Bundle.js`
+            : `${SERVER_URL_LIB}/vendor.[hash].Bundle.js`
+        }
+      />
     </head>
     <body>
       <div>This is a home page</div>
       <div id="content" />
-      <script src={devModal ? `${SERVER_URL_LIB}/main.Bundle.js` : `${SERVER_URL_LIB}/main.[hash].Bundle.js`} />
+      <script
+        src={
+          devModal
+            ? `${SERVER_URL_LIB}/main.Bundle.js`
+            : `${SERVER_URL_LIB}/main.[hash].Bundle.js`
+        }
+      />
     </body>
   </html>
 );

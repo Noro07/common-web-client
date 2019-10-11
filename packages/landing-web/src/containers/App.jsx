@@ -57,14 +57,18 @@ export class App extends PureComponent {
           <FullCalendar
             // defaultView="dayGridMonth"
             // plugins={[dayGridPlugin]}
-            defaultView='timeGridWeek'
+            defaultView="timeGridWeek"
             plugins={[timeGridPlugin]}
             eventClick={(info) => {
               var eventObj = info.event;
               if (eventObj.url) {
                 alert(
-                  'Clicked ' + eventObj.title + '.\n' +
-                  'Will open ' + eventObj.url + ' in a new tab'
+                  'Clicked ' +
+                    eventObj.title +
+                    '.\n' +
+                    'Will open ' +
+                    eventObj.url +
+                    ' in a new tab'
                 );
                 window.open(eventObj.url);
                 info.jsEvent.preventDefault(); // prevents browser from following link in current tab.
