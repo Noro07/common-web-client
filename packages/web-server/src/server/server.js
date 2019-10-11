@@ -60,7 +60,7 @@ app.use(
 
 app.use(
   '/user',
-  proxy({ target: 'http://localhost:5000/api/', changeOrigin: true }) // localhost:3000/user => localhost:5000/api/user
+  proxy({ target: 'http://localhost:5000/api/', changeOrigin: true }) // localhost:4000/user => localhost:5000/api/user
 );
 
 app.listen(app.get('port'), () => {
