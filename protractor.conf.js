@@ -13,7 +13,7 @@ exports.config = {
     // Default time to wait in ms before a test fails.
     defaultTimeoutInterval: 600000
   },
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'http://localhost:4000',
   capabilities: {
     browserName: 'chrome',
     chromeOptions: {

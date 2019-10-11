@@ -1,4 +1,4 @@
-describe('Protractor Test', () => {
+describe('Landing page', () => {
   it('should have a title', () => {
     browser.waitForAngularEnabled(false);
     browser.get('/test/#/');
