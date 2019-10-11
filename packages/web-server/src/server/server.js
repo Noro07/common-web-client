@@ -13,7 +13,7 @@ import enableMockServer from '../mock-server';
 
 const app = express();
 
-app.set('port', process.env.PORT_WEBSERVER || 3000);
+app.set('port', process.env.PORT_WEBSERVER || 4000);
 app.use(cors());
 if (process.env.NODE_ENV === 'development') {
   const webpack = require('webpack'); // eslint-disable-line global-require

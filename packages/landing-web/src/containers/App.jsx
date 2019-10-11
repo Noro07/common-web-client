@@ -49,7 +49,7 @@ export class App extends PureComponent {
     };
     return (
       <div className="landing-app">
-        {`Hello, ${user}!`}
+        {`Hello, ${user} !`}
         <div className="chart-container">
           <Line data={data} />
         </div>

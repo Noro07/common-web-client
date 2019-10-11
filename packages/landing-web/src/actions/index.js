@@ -12,6 +12,8 @@ export const fetchUser = () => (dispatch) => {
     (json) => {
       dispatch(loadUser(json.user));
     },
-    () => {}
+    () => {
+      // error
+    }
   );
 };
