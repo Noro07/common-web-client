@@ -62,9 +62,9 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './lib'),
-    filename: '[name].Bundle.js',
+    filename: devModal ? '[name].Bundle.js' : '[name].[hash].Bundle.js',
     publicPath: './',
-    sourceMapFilename: '[name].Bundle.map'
+    sourceMapFilename: devModal ? '[name].Bundle.map' : '[name].[hash].Bundle.map'
   },
   module: {
     rules: [{
@@ -161,7 +161,10 @@ module.exports = {
       }
     }),
     new MiniCssExtractPlugin({
-      filename: devModal ? '[name].[hash].css' : '[name].css'
+      // no need
+      // in dev modal, MiniCssExtractPlugin doesn't work, and it should not export only one css file to make it hard to debug
+      // filename: devModal ? '[name].css' : '[name].[hash].css'
+      filename: '[name].[hash].css'
     }),
     // new StyleLintPlugin({
     //   context: packagesDir,
@@ -179,7 +182,7 @@ module.exports = {
   ],
   stats: {
     colors: true,
-    chunks: false, // redueces the amount of stuff in termianl
+    chunks: false, // reduces the amount of stuff in terminal
     hash: false,
     modules: false,
     reasons: false,
