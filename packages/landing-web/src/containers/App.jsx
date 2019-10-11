@@ -4,7 +4,8 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Line } from 'react-chartjs-2';
 import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
+// import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
 import { fetchUser } from '../actions/index';
 
 export class App extends PureComponent {
@@ -48,14 +49,40 @@ export class App extends PureComponent {
     };
     return (
       <div className="landing-app">
-        {`Hello, ${user}!`}
+        {`Hello, ${user} !`}
         <div className="chart-container">
           <Line data={data} />
         </div>
         <div className="calendar">
           <FullCalendar
-            defaultView="dayGridMonth"
-            plugins={[dayGridPlugin]}
+            // defaultView="dayGridMonth"
+            // plugins={[dayGridPlugin]}
+            defaultView='timeGridWeek'
+            plugins={[timeGridPlugin]}
+            eventClick={(info) => {
+              var eventObj = info.event;
+              if (eventObj.url) {
+                alert(
+                  'Clicked ' + eventObj.title + '.\n' +
+                  'Will open ' + eventObj.url + ' in a new tab'
+                );
+                window.open(eventObj.url);
+                info.jsEvent.preventDefault(); // prevents browser from following link in current tab.
+              } else {
+                alert('Clicked ' + eventObj.title);
+              }
+            }}
+            events={[
+              {
+                title: 'simple event',
+                start: '2019-08-02'
+              },
+              {
+                title: 'event with URL',
+                url: 'https://www.google.com/',
+                start: '2019-08-03'
+              }
+            ]}
           />
         </div>
       </div>

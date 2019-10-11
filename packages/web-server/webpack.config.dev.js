@@ -3,7 +3,7 @@ const baseConfig = require('./webpack.config.base');
 
 const webpackDevConfig = baseConfig;
 
-webpackDevConfig.devtool = 'cheap-module-eval-srouce-map';
+webpackDevConfig.devtool = 'cheap-module-eval-source-map';
 
 webpackDevConfig.plugins.push(
   new webpack.HotModuleReplacementPlugin()

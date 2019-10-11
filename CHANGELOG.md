@@ -1,5 +1,13 @@
 # Changelog
 
+## 2019-08-19
+
+> add react-dev-utils
+
+Use react-dev-utils would open a tab with current browser, if this tab is open, it would auto refresh.
+TODO:
+using react-dev-utils is for auto detecting the available port instead of hardcode `3000`
+
 ## 2019-08-05
 
 > migrate to github
