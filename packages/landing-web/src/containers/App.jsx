@@ -47,6 +47,7 @@ export class App extends PureComponent {
         }
       ]
     };
+
     return (
       <div className="landing-app">
         {`Hello, ${user} !`}
