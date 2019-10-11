@@ -8,11 +8,9 @@ import configureStore from './stores/configuresStore';
 const store = configureStore();
 
 const APP = () => (
-  <div>
-    <Switch>
-      <Route path="/" component={LandingApp} exact />
-    </Switch>
-  </div>
+  <Switch>
+    <Route path="/" component={LandingApp} exact />
+  </Switch>
 );
 
 ReactDOM.render(
