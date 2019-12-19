@@ -1,5 +1,18 @@
 # Changelog
 
+## 2019-12-19
+
+> update chromedriver
+
+Downloads
+Current Releases
+If you are using Chrome version 79, please download ChromeDriver 79.0.3945.36
+If you are using Chrome version 78, please download ChromeDriver 78.0.3904.105
+If you are using Chrome version 77, please download ChromeDriver 77.0.3865.40
+For older version of Chrome, please see below for the version of ChromeDriver that supports it.
+
+Because developer may keep change its chrome version, it is necessary to updatee target chromedriver in `package.json`:`"pretest:e2e": "webdriver-manager update --versions.chrome=79.0.3945.36",`
+
 ## 2019-08-19
 
 > add react-dev-utils

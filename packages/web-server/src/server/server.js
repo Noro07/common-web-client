@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'development') {
     webpackDevMiddleware(compiler, {
       stats: {
         colors: true,
-        chunks: false, // redueces the amount of stuff in termianl
+        chunks: false, // reduces the amount of stuff in terminal
         'errors-only': true,
         hash: false,
         modules: false,
