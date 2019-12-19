@@ -13,6 +13,20 @@ For older version of Chrome, please see below for the version of ChromeDriver th
 
 Because developer may keep change its chrome version, it is necessary to updatee target chromedriver in `package.json`:`"pretest:e2e": "webdriver-manager update --versions.chrome=79.0.3945.36",`
 
+> add hash in js and css
+
+In html-webpack-plugin, add `hash: true`. This would automatic add js and css to the html with hash. It may look like
+```html
+<html><head><link href="./main.5b9e6298c44a69cf3de4.css?5b9e6298c44a69cf3de4" rel="stylesheet"></head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Demo dashboard</title>
+  <body>
+    <div id="content" />
+  <script type="text/javascript" src="./vendor.5b9e6298c44a69cf3de4.Bundle.js?5b9e6298c44a69cf3de4"></script><script type="text/javascript" src="./main.5b9e6298c44a69cf3de4.Bundle.js?5b9e6298c44a69cf3de4"></script></body>
+</html>
+```
+
 ## 2019-08-19
 
 > add react-dev-utils
