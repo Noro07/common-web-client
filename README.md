@@ -21,7 +21,7 @@ Monorepo that contains React and Redux. Built with Webpack. The project is serve
 Dev mode enables webpack-dev-middleware, will cause Webpack to compile files in-memory - code changes are saved and updated.
 
 1. `npm run start:dev` to start web server.
-2. Go to browser and hit <http://localhost:3000/test/#/> to launch.
+2. Go to browser and hit <http://localhost:4000/test/#/> to launch.
 
 ## Unit tests
 
@@ -51,6 +51,6 @@ Run `npm run check:lint` to do the lint check.
 
 Use Prettier to limit the coding style.
 
-Run `npm run format` would automaticly rewrite coding style, if you want to check which files should be rewrite instead of changing them automaticly, Run `npm run format:dry`, it would only list files.
+Run `npm run format` would automatically rewrite coding style, if you want to check which files should be rewrite instead of changing them automatically, Run `npm run format:dry`, it would only list files.
 
 Changes files in commit would be auto-fixed in pre-commit, no action is required.
