@@ -12,7 +12,7 @@
     "format:dry": "lerna run format:dry",
     "format": "lerna run format",
     "start": "lerna run start --scope web-server --stream",
-    "start:dev": "lerna run start:dev --scope web-server --stream",
+    "dev": "lerna run dev --scope web-server --stream",
     "pretest": "rimraf ./packages/*/tests/out",
     "test": "npm run check:lint && npm run test:unit",
     "test:unit": "lerna exec npm run test:unit --scope \"@(landing-web)\" --stream --concurrency 1",
