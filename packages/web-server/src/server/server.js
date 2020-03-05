@@ -48,10 +48,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 enableMockServer(app, process.env.ENABLE_MOCK === 'true');
 
 app.get(Routes.SERVER_URL_BASE, (req, res) => {
-  /* eslint react/jsx-filename-extension: [1, { "extensions": [".js", ".jsx"] }] */
-  const document = renderToString(<Home lang="en" />);
-  res.status(200).send(`<!DOCTYPE html>${document}`);
+  if (process.env.NODE_ENV === 'development') {
+    /* eslint react/jsx-filename-extension: [1, { "extensions": [".js", ".jsx"] }] */
+    const document = renderToString(<Home lang="en" />);
+    res.status(200).send(`<!DOCTYPE html>${document}`);
+  } else {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+  }
 });
+
+app.use(
+  Routes.SERVER_URL_BASE,
+  express.static(path.join(__dirname, '../public'))
+);
 
 app.use(
   Routes.SERVER_URL_LIB,
