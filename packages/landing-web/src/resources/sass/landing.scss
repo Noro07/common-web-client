@@ -1,12 +1,4 @@
 @import '~@fullcalendar/core/main';
 @import '~@fullcalendar/daygrid/main';
-
-.landing-app{
-  color: blue;
-  font-size: 28px;
-  
-  .chart-container{
-    width: 400px;
-    height: 400px;
-  }
-}
+@import '~@fullcalendar/timegrid/main';
+@import './app.scss';
