@@ -82,5 +82,7 @@ app.listen(app.get('port'), () => {
   );
   console.info('==');
   console.info('============================================');
-  openBrowser(`http://localhost:${app.get('port')}${Routes.SERVER_URL_BASE}`);
+  openBrowser(
+    `http://localhost:${app.get('port')}${Routes.SERVER_URL_BASE}/#/`
+  );
 });
