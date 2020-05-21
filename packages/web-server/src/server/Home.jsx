@@ -12,6 +12,10 @@ const Home = (language) => (
       <meta charSet="utf-8" />
       <title>Demo web</title>
       <script src={`${SERVER_URL_LIB}/vendor.Bundle.js`} />
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/driver.js/dist/driver.min.css"
+      />
     </head>
     <body>
       <div>This is a home page</div>

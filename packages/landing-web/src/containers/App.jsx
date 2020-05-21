@@ -7,6 +7,7 @@ import FullCalendar from '@fullcalendar/react';
 // import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import { fetchUser } from '../actions/index';
+import Driver from 'driver.js';
 
 export class App extends PureComponent {
   constructor(props) {
@@ -47,9 +48,18 @@ export class App extends PureComponent {
         }
       ]
     };
+
+    const driver = new Driver();
+    driver.highlight({
+      element: '#landing-app',
+      popover: {
+        title: 'Title for the Popover',
+        description: 'Description for it'
+      }
+    });
     return (
       <div className="landing-app">
-        {`Hello, ${user} !`}
+        <div id="landing-app">{`Hello, ${user} !`}</div>
         <div className="chart-container">
           <Line data={data} />
         </div>
