@@ -6,8 +6,8 @@ import { Line } from 'react-chartjs-2';
 import FullCalendar from '@fullcalendar/react';
 // import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
-import { fetchUser } from '../actions/index';
 import Driver from 'driver.js';
+import { fetchUser } from '../actions/index';
 
 export class App extends PureComponent {
   constructor(props) {
