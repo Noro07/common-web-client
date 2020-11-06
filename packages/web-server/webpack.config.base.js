@@ -73,7 +73,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, './lib/public'),
+    path: path.resolve(__dirname, './lib/'),
     filename: devModal ? '[name].Bundle.js' : '[name].[hash].Bundle.js',
     publicPath: './',
     sourceMapFilename: devModal
