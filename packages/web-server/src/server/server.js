@@ -53,14 +53,11 @@ app.get(Routes.SERVER_URL_BASE, (req, res) => {
     const document = renderToString(<Home lang="en" />);
     res.status(200).send(`<!DOCTYPE html>${document}`);
   } else {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+    res.sendFile(path.join(__dirname, '../index.html'));
   }
 });
 
-app.use(
-  Routes.SERVER_URL_BASE,
-  express.static(path.join(__dirname, '../public'))
-);
+app.use(Routes.SERVER_URL_BASE, express.static(path.join(__dirname, '../')));
 
 app.use(
   Routes.SERVER_URL_LIB,
