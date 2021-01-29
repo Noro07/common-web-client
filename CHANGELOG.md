@@ -16,6 +16,7 @@ Because developer may keep change its chrome version, it is necessary to updatee
 > add hash in js and css
 
 In html-webpack-plugin, add `hash: true`. This would automatic add js and css to the html with hash. It may look like
+
 ```html
 <html><head><link href="./main.5b9e6298c44a69cf3de4.css?5b9e6298c44a69cf3de4" rel="stylesheet"></head>
   <head>
@@ -59,3 +60,7 @@ If user doesn't run the script above and commit his changes, prettier would only
 ## 2018-10-10
 
 > ready to use
+
+## 2021-1-29
+
+> add dotenv plug to add env

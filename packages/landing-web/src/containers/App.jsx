@@ -57,9 +57,12 @@ export class App extends PureComponent {
         description: 'Description for it'
       }
     });
+    const site = process.env.REACT_APP_API_URL
+      ? process.env.REACT_APP_API_URL
+      : 'localhost';
     return (
       <div className="landing-app">
-        <div id="landing-app">{`Hello, ${user} !`}</div>
+        <div id="landing-app">{`Hello, ${user} ! This is ${site}`}</div>
         <div className="chart-container">
           <Line data={data} />
         </div>

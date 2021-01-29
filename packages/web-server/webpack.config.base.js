@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 const postcssPresentEnv = require('postcss-preset-env');
 const cssnano = require('cssnano');
 const path = require('path');
@@ -177,6 +178,7 @@ module.exports = {
     }
   },
   plugins: [
+    new Dotenv(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV)
